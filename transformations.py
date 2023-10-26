@@ -29,7 +29,7 @@ translated = translate(img, 100, 100)
 
 # ROTATING THE IMAGE
 def rotate(img, angle, rotpoint=None):
-    (height, width) = img.shape[:2]
+    (height, width) = img.shape[:2]# Acessing the first two properties of shape function height and weight
 
     if rotpoint is None:
         rotpoint = (width // 2, height // 2)
@@ -45,7 +45,7 @@ rotated = rotate(img, 180)
 
 
 # FLIPPING THE IMAGE
-fliped = cv.flip(img, -1)
+fliped = cv.flip(img, -1)# 0 flips around x-axis and 1 flips around y-axis and 0 does both.
 cv.imshow("fliped", fliped)
 
 
