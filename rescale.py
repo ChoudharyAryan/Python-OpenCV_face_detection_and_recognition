@@ -4,8 +4,8 @@ import cv2 as cv
 # FUNCTION TO CHANGE RESOLUTION OF LIVE VIDEO FEED ONLY
 def changeRes(width, height):
     # WORKS FOR LIVE WEBCAM ONLY
-    capture.set(3, width)
-    capture.set(4, height)
+    capture.set(3, width)# 3 stands for width 
+    capture.set(4, height)# 4 stands for height
     #capture.set(10, 50)
 
 
@@ -16,7 +16,7 @@ def rescsaleFrame(frame, scale=0.4):
     hieght = int(frame.shape[0] * scale)
     dimensions = (width, hieght)
 
-    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)# cv.resize function that resizes the image takes in the frame and dimensions.
 
 
 # READING IMAGES
@@ -38,7 +38,7 @@ while True:
     cv.imshow("Video", frame)
     cv.imshow("Video Resized", frame_resized)
 
-    if cv.waitKey(20) & 0xFF == ord("d"):
+    if cv.waitKey(20) & 0xFF == ord("d"):# using d as a key to kill the video while playing.
         break
 
 capture.release()
