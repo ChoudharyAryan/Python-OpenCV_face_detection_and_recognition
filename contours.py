@@ -20,7 +20,8 @@ cv.imshow("canny", canny)
 
 # ret, thresh = cv.threshold(
 #     gray, 125, 255, cv.THRESH_BINARY
-# )  # It Looks at an image and tries to binaries that image so if a particular pixil is less than 125 so it will be set to zero if or if its above 125 it will be set to white.
+# )  # It Looks at an image and tries to binaries that image so if a particular pixil is less than 125 so it will be set to zero or if its above 125 it will be set to max value which in this case is white.
+# It will return two outputs first is the thresold that was used and the second is the thresholded image.
 # cv.imshow("thresh", thresh)
 
 
