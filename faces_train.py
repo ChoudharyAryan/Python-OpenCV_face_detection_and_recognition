@@ -7,7 +7,7 @@ Dir = r"/home/aryan/Desktop/opencv/faces"
 harr_cascade = cv.CascadeClassifier("Harr_face.xml")
 
 features = []
-lables = []
+lables = [] # Lable is the index of that particular string in the people list.
 
 
 def create_train():  # This function will loop over every folder in our base folder and over every image and grab the face from that image and add it to our dataset.
